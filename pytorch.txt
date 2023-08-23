@@ -1,0 +1,19 @@
+#pytorch & jupyter installation
+
+sudo apt install python3-pip
+apt-get install -y python3-venv
+mkdir pytorch_awesome
+root@ubuntu1604:~/pytorch_awesome# python3 -m venv pytorch-awesome
+source pytorch-awesome/bin/activate
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+pip install jupyterlab
+jupyter-lab
+pip install notebook
+jupyter notebook
+apt-get update --fix-missing
+#open jupyter as root
+jupyter notebook --generate-config
+vi /root/.jupyter/jupyter-config.py
+##add below lines
+c.NotebookApp.allow_root=True
